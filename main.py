@@ -3,10 +3,10 @@ import xml.dom.minidom
 file_path_m = '/users/esemenov/downloads/list.xml'
 file_path_w = 'C:/Users/Evgeniy_S/Downloads/list.xml'
 
-root = ET.parse(file_path_w).getroot()
+root = ET.parse('list.xml').getroot()
 
 # используем функцию parse() для загрузки и парсинга XML файла
-doc = xml.dom.minidom.parse(file_path_w);
+doc = xml.dom.minidom.parse('list.xml');
 # выводим узел документа и имя первого дочернего тега
 print(doc.nodeName)
 print(doc.firstChild.tagName)
